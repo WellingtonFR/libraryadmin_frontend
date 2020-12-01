@@ -1,0 +1,17 @@
+.loader-container {
+  position: fixed;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.loader-container .loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  position: relative;
+  margin-left: -40px;
+  margin-top: -40px;
+}
