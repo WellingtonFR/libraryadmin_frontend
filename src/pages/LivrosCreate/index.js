@@ -49,14 +49,15 @@ export default function ConferenteCreate() {
     <Container>
       <Row className="justify-content-center">
         <Col className="col-lg-6">
-          <h2 className="text-center mb-3 mt-3 titulo-1">Cadastro de livros</h2>
+          <h2 className="text-center mb-4 mt-3 titulo-1">Cadastro de livros</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"
               name="titulo"
-              className="form-control"
+              className="form-control input-round"
               placeholder="Título"
               onChange={(e) => setTitulo(e.target.value)}
+              autoComplete="off"
               ref={register({ required: true, minLength: 3, maxLength: 200 })}
             />
             {errors.titulo && errors.titulo.type === "required" && (
@@ -78,7 +79,7 @@ export default function ConferenteCreate() {
             <input
               type="text"
               name="autor"
-              className="form-control"
+              className="form-control input-round"
               placeholder="Autor"
               onChange={(e) => setAutor(e.target.value)}
               ref={register({ required: true, minLength: 3, maxLength: 100 })}
@@ -102,7 +103,7 @@ export default function ConferenteCreate() {
             <input
               type="text"
               name="editora"
-              className="form-control"
+              className="form-control input-round"
               placeholder="Editora"
               onChange={(e) => setEditora(e.target.value)}
               ref={register({ required: true, minLength: 3, maxLength: 50 })}
@@ -126,7 +127,7 @@ export default function ConferenteCreate() {
             <input
               type="number"
               name="edicao"
-              className="form-control"
+              className="form-control input-round"
               placeholder="Edição"
               onChange={(e) => setEdicao(e.target.value)}
               ref={register({ required: true, minLength: 1, maxLength: 4 })}
@@ -150,8 +151,9 @@ export default function ConferenteCreate() {
             <input
               type="text"
               name="isbn"
-              className="form-control"
+              className="form-control input-round"
               placeholder="ISBN"
+              autoComplete="off"
               onChange={(e) => setIsbn(e.target.value)}
               ref={register({ required: true, minLength: 17, maxLength: 17 })}
             />
@@ -171,20 +173,20 @@ export default function ConferenteCreate() {
               </small>
             )}
 
-            <Row>
-              <Col>
+            <Row className="mt-4">
+              <Col className="mr-0 pr-0">
                 <button
                   type="submit"
-                  className="btn-style-1"
+                  className="btn-style-1 btn-round-left"
                   onClick={clearMessages}
                 >
                   Cadastrar
                 </button>
               </Col>
-              <Col>
+              <Col className="ml-0 pl-0">
                 <button
                   type="reset"
-                  className="btn btn-block btn-secondary"
+                  className="btn btn-block btn-round-right btn-style-2"
                   onClick={clearMessages}
                 >
                   Limpar
